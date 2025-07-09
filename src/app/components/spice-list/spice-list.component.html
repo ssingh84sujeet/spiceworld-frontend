@@ -1,0 +1,8 @@
+<h2>Spice List</h2>
+<ul>
+  <li *ngFor="let spice of spices">
+    <strong>{{ spice.name }}</strong> - ₹{{ spice.price }}
+   <button (click)="removeSpice(spice.id!)">Delete</button>
+
+  </li>
+</ul>

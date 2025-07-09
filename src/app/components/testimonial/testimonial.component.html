@@ -1,0 +1,30 @@
+<div class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">What Our Customers Say</h2>
+
+    <div
+      id="testimonial-scroll"
+      class="d-flex overflow-auto hide-scrollbar gap-3 px-2"
+      style="scroll-behavior: smooth"
+    >
+      <div
+        class="card testimonial-card flex-shrink-0"
+        *ngFor="let t of testimonials"
+        style="width: 300px; cursor: pointer;"
+        (click)="viewDetail(t.id)"
+      >
+        <img
+          [src]="getImageUrl(t.imagePath)"
+          class="card-img-top small-img"
+          alt="Customer Image"
+          *ngIf="t.imagePath"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ t.name }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ t.location }}</h6>
+          <p class="card-text text-wrap">{{ t.message }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+.hero-section {
+  background: url('/assets/loading-bg.jpg') center/cover no-repeat;
+  height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+.lead{
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+.btn-custom {
+  background-color: #e65100; /* deep orange */
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #bf360c; /* darker orange */
+  color: white;
+}
+
+.quote:hover {
+  transform: scale(1.08);
+   
+   border-width: 10px;
+  
+}
+.quote {
+  transition: transform 0.2s ease-in-out;
+}

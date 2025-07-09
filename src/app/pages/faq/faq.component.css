@@ -1,0 +1,7 @@
+.accordion-button {
+  font-weight: bold;
+  color: #007bff; /* Bootstrap primary blue */
+}
+.accordion-body {
+  background-color: #f9f9f9;
+}

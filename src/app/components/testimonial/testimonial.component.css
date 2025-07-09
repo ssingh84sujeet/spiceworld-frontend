@@ -1,0 +1,83 @@
+/* Ensure cards have a fixed width and proper padding */
+.testimonial-card {
+  width: 300px;
+  min-width: 280px;
+  max-width: 320px;
+  padding: 30px;
+  padding-left: 30;
+  padding-right: 30;
+ 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  word-wrap: break-word;
+  background-color: #f8f9fa;
+}
+
+/* Ensure text wraps and stays within the card */
+.card-body {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.card-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  max-height: 5.5em; /* roughly 3 lines */
+  line-height: 1.2em;
+}
+.testimonial-card .card-body::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-card .card-body {
+  scrollbar-width: none; /* Firefox */
+}
+/* Hide horizontal scrollbar */
+#testimonial-scroll::-webkit-scrollbar {
+  display: none;
+}
+#testimonial-scroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Optional styling */
+.testimonial-card {
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.card-text {
+  white-space: normal;
+  word-wrap: break-word;
+}
+.small-img {
+  height: 180px;
+  object-fit: cover;
+}
+/* .hover-popup {
+  position: absolute;
+  top: 0;
+  left: 310px;
+  width: 300px;
+  background-color: white;
+  border: 1px solid #dee2e6;
+  padding: 15px;
+  z-index: 10;
+  transition: opacity 0.2s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+} */
+.card:hover {
+  transform: scale(1.08);
+   border-color: pink;
+   border-width: 10px;
+  
+}
+.card {
+  transition: transform 0.2s ease-in-out;
+}

@@ -1,0 +1,30 @@
+<div class="container my-5" *ngIf="testimonial">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card shadow border-0 p-3">
+        <div class="row g-0 align-items-center">
+          <!-- Left panel: Image -->
+          <div class="col-md-4 text-center">
+            <img
+              *ngIf="testimonial.imagePath"
+              [src]="getImageUrl(testimonial.imagePath)"
+              class="img-fluid rounded-start"
+              [alt]="testimonial.name"
+              style="max-height: 300px; object-fit: cover;"
+            />
+          </div>
+
+          <!-- Right panel: Details -->
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title">{{ testimonial.name }}</h2>
+              <h5 class="text-muted">{{ testimonial.location }}</h5>
+              <p class="card-text mt-3">{{ testimonial.message }}</p>
+              <a routerLink="/" class="btn btn-outline-secondary mt-4">← Back to Testimonials</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

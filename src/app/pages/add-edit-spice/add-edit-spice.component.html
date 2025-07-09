@@ -1,0 +1,46 @@
+<div class="container mt-4">
+  <h2>{{ isEditMode ? 'Edit Spice' : 'Add New Spice' }}</h2>
+
+  <form [formGroup]="spiceForm" (ngSubmit)="onSubmit()">
+    <!-- Name -->
+    <div class="form-group mb-3">
+      <label for="name">Name of Spice</label>
+      <input type="text" id="name" class="form-control" formControlName="name">
+    </div>
+
+    <!-- Description -->
+    <div class="form-group mb-3">
+      <label for="description">Description</label>
+      <textarea id="description" class="form-control" formControlName="description"></textarea>
+    </div>
+
+    <!-- Price -->
+    <div class="form-group mb-3">
+      <label for="price">Price</label>
+      <input type="number" id="price" class="form-control" formControlName="price">
+    </div>
+
+    <!-- Origin -->
+    <div class="form-group mb-3">
+      <label for="origin">Origin (Optional)</label>
+      <input type="text" id="origin" class="form-control" formControlName="origin">
+    </div>
+
+    <!-- Image Upload -->
+    <div class="mb-3">
+      <label for="image" class="form-label">Upload Image</label>
+      <input type="file" class="form-control" id="image" (change)="onImageSelected($event)" accept="image/*">
+    </div>
+
+    <!-- Image Preview -->
+    <div class="mb-3" *ngIf="imagePreview">
+      <label class="form-label">Image Preview:</label><br />
+      <img [src]="imagePreview" alt="Preview" class="img-thumbnail" style="max-height: 200px;">
+    </div>
+
+    <!-- Submit -->
+    <button class="btn btn-primary" type="submit">
+      {{ isEditMode ? 'Update Spice' : 'Add Spice' }}
+    </button>
+  </form>
+</div>

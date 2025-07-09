@@ -1,0 +1,18 @@
+.contact-wrapper {
+  background-color: #fdfaf5;
+  font-family: 'Poppins', sans-serif;
+}
+h2 {
+  font-weight: 600;
+  color: #333;
+}
+label {
+  font-weight: 500;
+}
+.btn-primary {
+  background-color: #FF5722;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #e64a19;
+}
